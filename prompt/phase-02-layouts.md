@@ -18,6 +18,7 @@
 - Preserve existing routing and file structure
 - Use `{{BRAND_TONE}}` and `{{DESIGN_REFERENCES}}` as style guidance
 - No product-specific copy beyond placeholders
+- Do not apply final styling or polish; leave visual refinement for Phase 10.
 
 ## Tasks
 1. Implement marketing and app layout shells.

@@ -14,6 +14,14 @@ Builders who want a structured, prompt-driven workflow that stays product-agnost
 - A repeatable flow from idea to build
 - Optional Phase 8 for CMS + Admin and Phase 11 for Launch + Audit
 
+## Recommended stack (default)
+- Frontend: React + Vite
+- Styling: Tailwind CSS + shadcn/ui
+- Backend/DB: Supabase (or any Postgres-compatible provider)
+- Auth: Supabase Auth or Clerk
+- Payments: Stripe
+- Email: Resend or Postmark
+
 ## Quick start
 Start with `setup.md` for the full workflow and phase map.
 

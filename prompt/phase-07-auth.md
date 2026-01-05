@@ -17,6 +17,7 @@
 - Keep auth provider replaceable
 - Do not block public routes unnecessarily
 - Preserve existing routing structure
+- Do not apply final styling or polish; leave visual refinement for Phase 10.
 
 ## Tasks
 1. Implement login, signup, and logout flows.

@@ -18,6 +18,7 @@
 - Do not rename existing routes unless necessary
 - Keep page and component naming consistent
 - Avoid product-specific logic or data
+- Do not apply final styling or polish; leave visual refinement for Phase 10.
 
 ## Tasks
 1. Implement route structure for public and app areas.

@@ -19,12 +19,14 @@
 - Keep structure stable; do not introduce new top-level folders unless required
 - Use placeholders consistently (e.g., `{{PRODUCT_NAME}}`)
 - Avoid project-specific logic or data
+- Do not apply final styling or polish; leave visual refinement for Phase 10.
 
 ## Tasks
 1. Define folder and file conventions for the build target.
 2. Document baseline architecture decisions (routing, data layer, UI layers).
 3. Create or update a minimal project skeleton for `{{PRODUCT_NAME}}`.
-4. Add a short usage note explaining how to run the remaining phases.
+4. Add `.env.example` with required keys (no secrets).
+5. Add a short usage note explaining how to run the remaining phases.
 
 ## Acceptance criteria
 - [ ] Conventions are explicit and easy to follow

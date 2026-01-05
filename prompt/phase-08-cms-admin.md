@@ -24,6 +24,7 @@ Skip this phase if you do not need CMS content management or an admin surface.
 - Keep CMS/admin modular and optional
 - Avoid product-specific logic or hardcoded content
 - Preserve existing structure and naming
+- Do not apply final styling or polish; leave visual refinement for Phase 10.
 
 ## Tasks
 1. Decide CMS level:

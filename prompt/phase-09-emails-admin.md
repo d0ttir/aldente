@@ -18,6 +18,7 @@
 - Do not build a full admin app unless required
 - Keep emails template-based and reusable
 - Preserve public/app separation
+- Do not apply final styling or polish; leave visual refinement for Phase 10.
 
 ## Tasks
 1. Define key transactional emails and triggers.

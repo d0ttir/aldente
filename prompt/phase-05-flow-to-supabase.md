@@ -18,6 +18,7 @@
 - Do not hardcode provider-specific logic unless required
 - Keep data flows minimal and focused on core journeys
 - Preserve existing structure
+- Do not apply final styling or polish; leave visual refinement for Phase 10.
 
 ## Tasks
 1. Map UI actions to backend operations.

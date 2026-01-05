@@ -3,6 +3,14 @@
 ## What this repo is
 A prompt + docs boilerplate for building SaaS products with vibe-coding tools (Lovable, etc.) without spaghetti code. You fill the docs, then run the prompts in phases to incrementally build a clean, scalable app.
 
+## Recommended stack (default)
+- Frontend: React + Vite
+- Styling: Tailwind CSS + shadcn/ui
+- Backend/DB: Supabase (or any Postgres-compatible provider)
+- Auth: Supabase Auth or Clerk
+- Payments: Stripe
+- Email: Resend or Postmark
+
 ## Quick start
 1. Clone or fork the repo.
 2. Decide your build target (Lovable or another coding agent).
@@ -16,15 +24,15 @@ A prompt + docs boilerplate for building SaaS products with vibe-coding tools (L
    - `docs/schema-initial.sql` (optional)
    - `docs/schema-cms.sql` (optional)
 4. Run the prompts in `prompt/` in order (default):
-   - `prompt/phase-1-setup.md`
-   - `prompt/phase-2-layouts.md`
-   - `prompt/phase-3-structure.md`
-   - `prompt/phase-4-data-model.md`
-   - `prompt/phase-5-flow-to-supabase.md`
-   - `prompt/phase-6-stripe.md`
-   - `prompt/phase-7-auth.md`
-   - `prompt/phase-8-cms-admin.md` (optional)
-   - `prompt/phase-9-emails-admin.md`
+   - `prompt/phase-01-setup.md`
+   - `prompt/phase-02-layouts.md`
+   - `prompt/phase-03-structure.md`
+   - `prompt/phase-04-data-model.md`
+   - `prompt/phase-05-flow-to-supabase.md`
+   - `prompt/phase-06-stripe.md`
+   - `prompt/phase-07-auth.md`
+   - `prompt/phase-08-cms-admin.md` (optional)
+   - `prompt/phase-09-emails-admin.md`
    - `prompt/phase-10-design-system.md`
    - `prompt/phase-11-launch-audit.md` (optional)
 
@@ -46,19 +54,20 @@ How to replace:
 - Design direction and tone
 - Data model basics
 - Integrations: DB, auth, payments, email, admin tooling
+- Base env template: create `.env.example` with required keys (no secrets)
 
 ## Phase map
 | Phase file | When to use | Inputs required | Output expectation |
 | --- | --- | --- | --- |
-| `prompt/phase-1-setup.md` | Starting a new build | `setup.md`, all `docs/*` you have so far | Repo conventions, tooling decisions, baseline architecture |
-| `prompt/phase-2-layouts.md` | After setup | `docs/ui-structure.md`, `docs/design-guidelines.md` | App shell, layouts, responsive structure |
-| `prompt/phase-3-structure.md` | After layouts | `docs/ui-structure.md`, `docs/content-pages.md`, `docs/journeys.md` | Route structure and component boundaries |
-| `prompt/phase-4-data-model.md` | When data entities are known | `docs/data-models.md`, optional `docs/schema-*.sql` | Types/entities and API assumptions |
-| `prompt/phase-5-flow-to-supabase.md` | When you need DB/backend flow | `docs/data-models.md`, `docs/schema-*.sql` | DB integration plan and data flow wiring |
-| `prompt/phase-6-stripe.md` | If billing is required | `docs/data-models.md`, `docs/journeys.md` | Billing flows, plans, entitlements |
-| `prompt/phase-7-auth.md` | If auth is required | `docs/data-models.md`, `docs/journeys.md` | Auth flows, roles, protected routes |
-| `prompt/phase-8-cms-admin.md` | Optional CMS and admin surface | `docs/content-pages.md`, `docs/journeys.md`, `docs/ui-structure.md`, `docs/data-models.md`, `docs/assets.md`, `docs/schema-cms.sql` | CMS/admin surfaces ready for content ops |
-| `prompt/phase-9-emails-admin.md` | If email/admin is required | `docs/journeys.md`, `docs/content-pages.md` | Transactional emails and admin surfaces |
+| `prompt/phase-01-setup.md` | Starting a new build | `setup.md`, all `docs/*` you have so far | Repo conventions, tooling decisions, baseline architecture |
+| `prompt/phase-02-layouts.md` | After setup | `docs/ui-structure.md`, `docs/design-guidelines.md` | App shell, layouts, responsive structure |
+| `prompt/phase-03-structure.md` | After layouts | `docs/ui-structure.md`, `docs/content-pages.md`, `docs/journeys.md` | Route structure and component boundaries |
+| `prompt/phase-04-data-model.md` | When data entities are known | `docs/data-models.md`, optional `docs/schema-*.sql` | Types/entities and API assumptions |
+| `prompt/phase-05-flow-to-supabase.md` | When you need DB/backend flow | `docs/data-models.md`, `docs/schema-*.sql` | DB integration plan and data flow wiring |
+| `prompt/phase-06-stripe.md` | If billing is required | `docs/data-models.md`, `docs/journeys.md` | Billing flows, plans, entitlements |
+| `prompt/phase-07-auth.md` | If auth is required | `docs/data-models.md`, `docs/journeys.md` | Auth flows, roles, protected routes |
+| `prompt/phase-08-cms-admin.md` | Optional CMS and admin surface | `docs/content-pages.md`, `docs/journeys.md`, `docs/ui-structure.md`, `docs/data-models.md`, `docs/assets.md`, `docs/schema-cms.sql` | CMS/admin surfaces ready for content ops |
+| `prompt/phase-09-emails-admin.md` | If email/admin is required | `docs/journeys.md`, `docs/content-pages.md` | Transactional emails and admin surfaces |
 | `prompt/phase-10-design-system.md` | For UI polish and consistency | `docs/design-guidelines.md` | Tokens, components, and accessibility |
 | `prompt/phase-11-launch-audit.md` | Optional launch readiness and audit | `docs/content-pages.md`, `docs/journeys.md`, `docs/ui-structure.md`, `docs/data-models.md`, `docs/assets.md` | Launch checklist and code audit results |
 

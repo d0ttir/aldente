@@ -18,6 +18,7 @@
 - Keep entities generic and product-agnostic
 - Use placeholders for any product-specific fields
 - Do not implement full DB integration yet
+- Do not apply final styling or polish; leave visual refinement for Phase 10.
 
 ## Tasks
 1. Translate entities into typed models or schemas.

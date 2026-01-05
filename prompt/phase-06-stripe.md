@@ -18,6 +18,7 @@
 - Keep billing logic isolated and replaceable
 - Do not require production keys
 - Avoid hardcoding pricing in multiple places
+- Do not apply final styling or polish; leave visual refinement for Phase 10.
 
 ## Tasks
 1. Define plan and entitlement models.
