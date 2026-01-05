@@ -1,0 +1,98 @@
+# SaaS Boilerplate Setup
+
+## What this repo is
+A prompt + docs boilerplate for building SaaS products with vibe-coding tools (Lovable, etc.) without spaghetti code. You fill the docs, then run the prompts in phases to incrementally build a clean, scalable app.
+
+## Quick start
+1. Clone or fork the repo.
+2. Decide your build target (Lovable or another coding agent).
+3. Fill out `docs/` in this order:
+   - `docs/assets.md`
+   - `docs/design-guidelines.md`
+   - `docs/ui-structure.md`
+   - `docs/content-pages.md`
+   - `docs/journeys.md`
+   - `docs/data-models.md`
+   - `docs/schema-initial.sql` (optional)
+   - `docs/schema-cms.sql` (optional)
+4. Run the prompts in `prompt/` in order (default):
+   - `prompt/phase-1-setup.md`
+   - `prompt/phase-2-layouts.md`
+   - `prompt/phase-3-structure.md`
+   - `prompt/phase-4-data-model.md`
+   - `prompt/phase-5-flow-to-supabase.md`
+   - `prompt/phase-6-stripe.md`
+   - `prompt/phase-7-auth.md`
+   - `prompt/phase-8-cms-admin.md` (optional)
+   - `prompt/phase-9-emails-admin.md`
+   - `prompt/phase-10-design-system.md`
+   - `prompt/phase-11-launch-audit.md` (optional)
+
+## Boilerplate variables
+Placeholders appear across `docs/` and `prompt/`. Replace them with your product info before or during a phase.
+
+Common placeholders:
+- `{{PRODUCT_NAME}}`, `{{ONE_LINER}}`, `{{TARGET_USERS}}`
+- `{{CORE_FEATURES}}`, `{{PAGES}}`
+- `{{TECH_STACK}}`, `{{DB_PROVIDER}}`, `{{AUTH_PROVIDER}}`, `{{PAYMENT_PROVIDER}}`, `{{EMAIL_PROVIDER}}`
+- `{{BRAND_TONE}}`, `{{DESIGN_REFERENCES}}`
+
+How to replace:
+- Manual find/replace is enough. Use repo-wide search for `{{` to catch all placeholders.
+
+## Preparation checklist
+- Product basics: name, one-liner, audience
+- Feature scope and pages
+- Design direction and tone
+- Data model basics
+- Integrations: DB, auth, payments, email, admin tooling
+
+## Phase map
+| Phase file | When to use | Inputs required | Output expectation |
+| --- | --- | --- | --- |
+| `prompt/phase-1-setup.md` | Starting a new build | `setup.md`, all `docs/*` you have so far | Repo conventions, tooling decisions, baseline architecture |
+| `prompt/phase-2-layouts.md` | After setup | `docs/ui-structure.md`, `docs/design-guidelines.md` | App shell, layouts, responsive structure |
+| `prompt/phase-3-structure.md` | After layouts | `docs/ui-structure.md`, `docs/content-pages.md`, `docs/journeys.md` | Route structure and component boundaries |
+| `prompt/phase-4-data-model.md` | When data entities are known | `docs/data-models.md`, optional `docs/schema-*.sql` | Types/entities and API assumptions |
+| `prompt/phase-5-flow-to-supabase.md` | When you need DB/backend flow | `docs/data-models.md`, `docs/schema-*.sql` | DB integration plan and data flow wiring |
+| `prompt/phase-6-stripe.md` | If billing is required | `docs/data-models.md`, `docs/journeys.md` | Billing flows, plans, entitlements |
+| `prompt/phase-7-auth.md` | If auth is required | `docs/data-models.md`, `docs/journeys.md` | Auth flows, roles, protected routes |
+| `prompt/phase-8-cms-admin.md` | Optional CMS and admin surface | `docs/content-pages.md`, `docs/journeys.md`, `docs/ui-structure.md`, `docs/data-models.md`, `docs/assets.md`, `docs/schema-cms.sql` | CMS/admin surfaces ready for content ops |
+| `prompt/phase-9-emails-admin.md` | If email/admin is required | `docs/journeys.md`, `docs/content-pages.md` | Transactional emails and admin surfaces |
+| `prompt/phase-10-design-system.md` | For UI polish and consistency | `docs/design-guidelines.md` | Tokens, components, and accessibility |
+| `prompt/phase-11-launch-audit.md` | Optional launch readiness and audit | `docs/content-pages.md`, `docs/journeys.md`, `docs/ui-structure.md`, `docs/data-models.md`, `docs/assets.md` | Launch checklist and code audit results |
+
+## Skipping optional phases
+- No DB: skip phase 5, remove DB references from `docs/data-models.md` and `docs/schema-*.sql`, and ensure later phases do not assume persistence.
+- No payments: skip phase 6 and remove pricing/billing references in docs and prompts.
+- No auth: skip phase 7 and remove protected routes, roles, and account flows.
+- No email/admin: skip phase 9 and remove email templates/admin panel assumptions.
+
+## Recommended workflow in Lovable
+- Paste one phase prompt at a time.
+- Attach the relevant `docs/*` files as context inputs.
+- After each phase:
+  - Commit or checkpoint changes.
+  - Run a quick code audit for that phase (remove dead code, validate routing, check role guards).
+  - Verify routes, data flow, and basic UI structure.
+  - Keep the file structure stable before moving to the next phase.
+
+## Repo conventions
+- `docs/` contains your source-of-truth product definitions.
+- `prompt/` contains phased prompts to implement those docs.
+- Use consistent naming:
+  - Pages: `KebabCase` for routes (`/pricing`, `/app/settings`)
+  - Components: `PascalCase` (`PricingTable`, `BillingCard`)
+  - Entities: `snake_case` for tables, `PascalCase` for types
+- Definition of done per phase:
+  - Phase 1: baseline structure and decisions documented
+  - Phase 2: layouts and responsive shells render
+  - Phase 3: routes and modules map cleanly to docs
+  - Phase 4: data entities and relationships defined
+  - Phase 5: data flow is wired (or explicitly deferred)
+  - Phase 6: billing flow is defined (or skipped)
+  - Phase 7: auth flow is defined (or skipped)
+  - Phase 8: CMS/admin surfaces defined (or skipped)
+  - Phase 9: email/admin surfaces defined (or skipped)
+  - Phase 10: UI tokens and component rules applied
+  - Phase 11: launch checklist and audit completed (or skipped)

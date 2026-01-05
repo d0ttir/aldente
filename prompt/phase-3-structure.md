@@ -1,0 +1,36 @@
+# Phase 3 – Structure
+
+## Goal
+- Define routing strategy and component boundaries
+- Map pages to modules and reusable components
+- Align UI structure to product journeys
+
+## Inputs
+- `docs/ui-structure.md`
+- `docs/content-pages.md`
+- `docs/journeys.md`
+
+## Assumptions
+- Layout shells exist from phase 2
+- The route map is defined in `docs/ui-structure.md`
+
+## Constraints
+- Do not rename existing routes unless necessary
+- Keep page and component naming consistent
+- Avoid product-specific logic or data
+
+## Tasks
+1. Implement route structure for public and app areas.
+2. Create page modules based on `docs/ui-structure.md`.
+3. Add reusable components used across multiple pages.
+4. Stub any missing pages with placeholder content.
+
+## Acceptance criteria
+- [ ] Routes are in place and navigable
+- [ ] Page modules align with `docs/*`
+- [ ] Shared components are extracted and reusable
+- [ ] Output includes page and component structure updates
+
+## Notes / common pitfalls
+- If structure is already defined, skip this phase.
+- Keep modules thin; avoid premature feature logic.
