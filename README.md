@@ -1,4 +1,4 @@
-![Aldente boilerplate header](images/aldente-boilerplate.png)
+![Aldente boilerplate header](images/aldente-boilerplate.webp)
 
 # SaaS Vibe-Coding Boilerplate
 
