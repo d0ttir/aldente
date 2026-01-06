@@ -25,6 +25,24 @@ Purpose: define route map, layouts, and module breakdown for `{{PRODUCT_NAME}}`.
 - UI blocks: cards, tables, forms, modals
 - Feedback: empty, loading, error states
 
+### Frontend folder structure (recommended)
+src/
+components/
+ui/         // shadcn/ui + shared primitives only
+features/   // feature-level components grouped by domain
+hooks/        // reusable React hooks
+lib/          // utilities (fetchers, formatters, config)
+types/        // shared TypeScript types (DTOs, domain types)
+validations/  // zod schemas (forms + API payloads)
+
+Rules
+- `components/ui` = reusable primitives, no business logic
+- `components/features` = feature components, can import ui primitives
+- shared API/domain types live in `types/`
+- validations in `validations/` and infer TS types where possible
+- keep API calls centralized in `lib/` (e.g. `lib/api.ts`) to avoid scattered error handling
+- Recommended defaults (optional): `src/components/ErrorBoundary.tsx`, `src/lib/api.ts`, `src/types/api.ts`
+
 ### Admin routes (optional)
 - `/admin` dashboard
 - `/admin/users`
