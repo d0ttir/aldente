@@ -4,11 +4,11 @@
 A prompt + docs boilerplate for building SaaS products with AI-assisted builders without spaghetti code. You fill the docs, then run the prompts in phases to incrementally build a clean, scalable app.
 
 ## Choose your build tool
-- Codex → `agents/codex.md`
-- Claude Code → `agents/claude-code.md`
+- Codex → [agents/codex.md](agents/codex.md)
+- Claude Code → [agents/claude-code.md](agents/claude-code.md)
   - Includes a skills-friendly workflow loop + phase runner template.
-- Cursor → `agents/cursor.md`
-- Lovable → `agents/lovable.md`
+- Cursor → [agents/cursor.md](agents/cursor.md)
+- Lovable → [agents/lovable.md](agents/lovable.md)
 
 The phases are the same; only execution mechanics differ.
 
@@ -24,26 +24,26 @@ The phases are the same; only execution mechanics differ.
 1. Clone or fork the repo.
 2. Decide your build tool (Codex, Claude Code, Cursor, Lovable, or another agent).
 3. Fill out `docs/` in this order:
-   - `docs/assets.md`
-   - `docs/design-guidelines.md`
-   - `docs/ui-structure.md`
-   - `docs/content-pages.md`
-   - `docs/journeys.md`
-   - `docs/data-models.md`
-   - `docs/schema-initial.sql` (optional)
-   - `docs/schema-cms.sql` (optional)
+   - [docs/assets.md](docs/assets.md)
+   - [docs/design-guidelines.md](docs/design-guidelines.md)
+   - [docs/ui-structure.md](docs/ui-structure.md)
+   - [docs/content-pages.md](docs/content-pages.md)
+   - [docs/journeys.md](docs/journeys.md)
+   - [docs/data-models.md](docs/data-models.md)
+   - [docs/schema-initial.sql](docs/schema-initial.sql) (optional)
+   - [docs/schema-cms.sql](docs/schema-cms.sql) (optional)
 4. Run the prompts in `prompt/` in order (default):
-   - `prompt/01-setup.md`
-   - `prompt/02-layouts.md`
-   - `prompt/03-structure.md`
-   - `prompt/04-data-model.md`
-   - `prompt/05-db-flow.md`
-   - `prompt/06-stripe.md`
-   - `prompt/07-auth.md`
-   - `prompt/08-cms-admin.md` (optional)
-   - `prompt/09-emails-admin.md`
-   - `prompt/10-design-system.md`
-   - `prompt/11-launch-audit.md` (optional)
+   - [prompt/01-setup.md](prompt/01-setup.md)
+   - [prompt/02-layouts.md](prompt/02-layouts.md)
+   - [prompt/03-structure.md](prompt/03-structure.md)
+   - [prompt/04-data-model.md](prompt/04-data-model.md)
+   - [prompt/05-db-flow.md](prompt/05-db-flow.md)
+   - [prompt/06-stripe.md](prompt/06-stripe.md)
+   - [prompt/07-auth.md](prompt/07-auth.md)
+   - [prompt/08-cms-admin.md](prompt/08-cms-admin.md) (optional)
+   - [prompt/09-emails-admin.md](prompt/09-emails-admin.md)
+   - [prompt/10-design-system.md](prompt/10-design-system.md)
+   - [prompt/11-launch-audit.md](prompt/11-launch-audit.md) (optional)
 
 ## Boilerplate variables
 Placeholders appear across `docs/` and `prompt/`. Replace them with your product info before or during a phase.
@@ -68,17 +68,17 @@ How to replace:
 ## Phase map
 | Phase file | When to use | Inputs required | Output expectation |
 | --- | --- | --- | --- |
-| `prompt/01-setup.md` | Starting a new build | `setup.md`, all `docs/*` you have so far | Repo conventions, tooling decisions, baseline architecture |
-| `prompt/02-layouts.md` | After setup | `docs/ui-structure.md`, `docs/design-guidelines.md` | App shell, layouts, responsive structure |
-| `prompt/03-structure.md` | After layouts | `docs/ui-structure.md`, `docs/content-pages.md`, `docs/journeys.md` | Route structure and component boundaries |
-| `prompt/04-data-model.md` | When data entities are known | `docs/data-models.md`, optional `docs/schema-*.sql` | Types/entities and API assumptions |
-| `prompt/05-db-flow.md` | When you need DB/backend flow | `docs/data-models.md`, `docs/schema-*.sql` | DB integration plan and data flow wiring |
-| `prompt/06-stripe.md` | If billing is required | `docs/data-models.md`, `docs/journeys.md` | Billing flows, plans, entitlements |
-| `prompt/07-auth.md` | If auth is required | `docs/data-models.md`, `docs/journeys.md` | Auth flows, roles, protected routes |
-| `prompt/08-cms-admin.md` | Optional CMS and admin surface | `docs/content-pages.md`, `docs/journeys.md`, `docs/ui-structure.md`, `docs/data-models.md`, `docs/assets.md`, `docs/schema-cms.sql` | CMS/admin surfaces ready for content ops |
-| `prompt/09-emails-admin.md` | If email/admin is required | `docs/journeys.md`, `docs/content-pages.md` | Transactional emails and admin surfaces |
-| `prompt/10-design-system.md` | For UI polish and consistency | `docs/design-guidelines.md` | Tokens, components, and accessibility |
-| `prompt/11-launch-audit.md` | Optional launch readiness and audit | `docs/content-pages.md`, `docs/journeys.md`, `docs/ui-structure.md`, `docs/data-models.md`, `docs/assets.md` | Launch checklist and code audit results |
+| [prompt/01-setup.md](prompt/01-setup.md) | Starting a new build | [setup.md](setup.md), all [docs/](docs/) you have so far | Repo conventions, tooling decisions, baseline architecture |
+| [prompt/02-layouts.md](prompt/02-layouts.md) | After setup | [docs/ui-structure.md](docs/ui-structure.md), [docs/design-guidelines.md](docs/design-guidelines.md) | App shell, layouts, responsive structure |
+| [prompt/03-structure.md](prompt/03-structure.md) | After layouts | [docs/ui-structure.md](docs/ui-structure.md), [docs/content-pages.md](docs/content-pages.md), [docs/journeys.md](docs/journeys.md) | Route structure and component boundaries |
+| [prompt/04-data-model.md](prompt/04-data-model.md) | When data entities are known | [docs/data-models.md](docs/data-models.md), optional [docs/schema-*.sql](docs/schema-initial.sql) | Types/entities and API assumptions |
+| [prompt/05-db-flow.md](prompt/05-db-flow.md) | When you need DB/backend flow | [docs/data-models.md](docs/data-models.md), [docs/schema-*.sql](docs/schema-initial.sql) | DB integration plan and data flow wiring |
+| [prompt/06-stripe.md](prompt/06-stripe.md) | If billing is required | [docs/data-models.md](docs/data-models.md), [docs/journeys.md](docs/journeys.md) | Billing flows, plans, entitlements |
+| [prompt/07-auth.md](prompt/07-auth.md) | If auth is required | [docs/data-models.md](docs/data-models.md), [docs/journeys.md](docs/journeys.md) | Auth flows, roles, protected routes |
+| [prompt/08-cms-admin.md](prompt/08-cms-admin.md) | Optional CMS and admin surface | [docs/content-pages.md](docs/content-pages.md), [docs/journeys.md](docs/journeys.md), [docs/ui-structure.md](docs/ui-structure.md), [docs/data-models.md](docs/data-models.md), [docs/assets.md](docs/assets.md), [docs/schema-cms.sql](docs/schema-cms.sql) | CMS/admin surfaces ready for content ops |
+| [prompt/09-emails-admin.md](prompt/09-emails-admin.md) | If email/admin is required | [docs/journeys.md](docs/journeys.md), [docs/content-pages.md](docs/content-pages.md) | Transactional emails and admin surfaces |
+| [prompt/10-design-system.md](prompt/10-design-system.md) | For UI polish and consistency | [docs/design-guidelines.md](docs/design-guidelines.md) | Tokens, components, and accessibility |
+| [prompt/11-launch-audit.md](prompt/11-launch-audit.md) | Optional launch readiness and audit | [docs/content-pages.md](docs/content-pages.md), [docs/journeys.md](docs/journeys.md), [docs/ui-structure.md](docs/ui-structure.md), [docs/data-models.md](docs/data-models.md), [docs/assets.md](docs/assets.md) | Launch checklist and code audit results |
 
 ## Skipping optional phases
 - No DB: skip phase 5, remove DB references from `docs/data-models.md` and `docs/schema-*.sql`, and ensure later phases do not assume persistence.
@@ -97,8 +97,8 @@ How to replace:
 
 ## Phase runner template (tool-agnostic)
 Use this copy block in any tool:
-- Read: `docs/...` (list the inputs for this phase)
-- Execute: `prompt/XX-...md`
+- Read: [docs/](docs/) (list the inputs for this phase)
+- Execute: [prompt/](prompt/) (choose the correct `XX-...md`)
 - Output expectations: list the acceptance criteria from the phase
 - If inputs are missing, stop and ask before proceeding
 
