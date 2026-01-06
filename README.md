@@ -1,6 +1,6 @@
 ![Aldente boilerplate header](images/aldente-boilerplate.webp)
 
-# SaaS Vibe-Coding Boilerplate
+# SaaS Boilerplate
 
 ## What it is
 A reusable prompt + docs kit for building SaaS products with AI-assisted builders. Fill the docs, run the phases, and ship a clean, consistent app without rebuilding the fundamentals every time.
