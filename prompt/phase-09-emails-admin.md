@@ -1,5 +1,10 @@
 # Phase 9 – Emails and Admin
 
+This phase is tool-agnostic.
+Before running: ensure the agent can read the required `docs/*` inputs.
+See `AGENT_INSTRUCTIONS.md` and `agents/README.md` for guidance.
+
+
 ## Goal
 - Define transactional email flows
 - Provide a lightweight admin surface

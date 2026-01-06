@@ -1,5 +1,10 @@
 # Phase 8 – CMS + Admin
 
+This phase is tool-agnostic.
+Before running: ensure the agent can read the required `docs/*` inputs.
+See `AGENT_INSTRUCTIONS.md` and `agents/README.md` for guidance.
+
+
 Skip this phase if you do not need CMS content management or an admin surface.
 
 ## Goal

@@ -1,7 +1,15 @@
 # SaaS Boilerplate Setup
 
 ## What this repo is
-A prompt + docs boilerplate for building SaaS products with vibe-coding tools (Lovable, etc.) without spaghetti code. You fill the docs, then run the prompts in phases to incrementally build a clean, scalable app.
+A prompt + docs boilerplate for building SaaS products with AI-assisted builders without spaghetti code. You fill the docs, then run the prompts in phases to incrementally build a clean, scalable app.
+
+## Choose your build tool
+- Codex → `agents/codex.md`
+- Claude Code → `agents/claude-code.md`
+- Cursor → `agents/cursor.md`
+- Lovable → `agents/lovable.md`
+
+The phases are the same; only execution mechanics differ.
 
 ## Recommended stack (default)
 - Frontend: React + Vite
@@ -13,7 +21,7 @@ A prompt + docs boilerplate for building SaaS products with vibe-coding tools (L
 
 ## Quick start
 1. Clone or fork the repo.
-2. Decide your build target (Lovable or another coding agent).
+2. Decide your build tool (Codex, Claude Code, Cursor, Lovable, or another agent).
 3. Fill out `docs/` in this order:
    - `docs/assets.md`
    - `docs/design-guidelines.md`
@@ -77,7 +85,7 @@ How to replace:
 - No auth: skip phase 7 and remove protected routes, roles, and account flows.
 - No email/admin: skip phase 9 and remove email templates/admin panel assumptions.
 
-## Recommended workflow in Lovable
+## Recommended workflow
 - Paste one phase prompt at a time.
 - Attach the relevant `docs/*` files as context inputs.
 - After each phase:
@@ -85,6 +93,13 @@ How to replace:
   - Run a quick code audit for that phase (remove dead code, validate routing, check role guards).
   - Verify routes, data flow, and basic UI structure.
   - Keep the file structure stable before moving to the next phase.
+
+## Phase runner template (tool-agnostic)
+Use this copy block in any tool:
+- Read: `docs/...` (list the inputs for this phase)
+- Execute: `prompt/phase-XX-...md`
+- Output expectations: list the acceptance criteria from the phase
+- If inputs are missing, stop and ask before proceeding
 
 ## Repo conventions
 - `docs/` contains your source-of-truth product definitions.

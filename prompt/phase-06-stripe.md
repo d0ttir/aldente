@@ -1,5 +1,10 @@
 # Phase 6 – Billing
 
+This phase is tool-agnostic.
+Before running: ensure the agent can read the required `docs/*` inputs.
+See `AGENT_INSTRUCTIONS.md` and `agents/README.md` for guidance.
+
+
 ## Goal
 - Define plans, entitlements, and billing flows
 - Implement checkout and post-purchase states

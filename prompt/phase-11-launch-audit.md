@@ -1,5 +1,10 @@
 # Phase 11 – Launch + Audit
 
+This phase is tool-agnostic.
+Before running: ensure the agent can read the required `docs/*` inputs.
+See `AGENT_INSTRUCTIONS.md` and `agents/README.md` for guidance.
+
+
 Skip this phase if you are not approaching launch or do not need a structured audit.
 
 ## Goal

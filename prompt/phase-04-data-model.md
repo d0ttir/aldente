@@ -1,5 +1,10 @@
 # Phase 4 – Data Model
 
+This phase is tool-agnostic.
+Before running: ensure the agent can read the required `docs/*` inputs.
+See `AGENT_INSTRUCTIONS.md` and `agents/README.md` for guidance.
+
+
 ## Goal
 - Define types and entities for `{{PRODUCT_NAME}}`
 - Specify relationships and permissions

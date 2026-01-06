@@ -1,5 +1,10 @@
 # Phase 2 – Layouts
 
+This phase is tool-agnostic.
+Before running: ensure the agent can read the required `docs/*` inputs.
+See `AGENT_INSTRUCTIONS.md` and `agents/README.md` for guidance.
+
+
 ## Goal
 - Build the app shell and layout patterns
 - Ensure responsive behavior across core views

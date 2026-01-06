@@ -1,5 +1,10 @@
 # Phase 7 – Auth
 
+This phase is tool-agnostic.
+Before running: ensure the agent can read the required `docs/*` inputs.
+See `AGENT_INSTRUCTIONS.md` and `agents/README.md` for guidance.
+
+
 ## Goal
 - Implement authentication and role-based access
 - Define protected routes and session state

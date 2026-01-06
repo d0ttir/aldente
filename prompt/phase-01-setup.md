@@ -1,5 +1,10 @@
 # Phase 1 – Setup
 
+This phase is tool-agnostic.
+Before running: ensure the agent can read the required `docs/*` inputs.
+See `AGENT_INSTRUCTIONS.md` and `agents/README.md` for guidance.
+
+
 ## Goal
 - Establish repo conventions for `{{PRODUCT_NAME}}`
 - Decide baseline architecture and tooling

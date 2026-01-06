@@ -1,5 +1,10 @@
 # Phase 3 – Structure
 
+This phase is tool-agnostic.
+Before running: ensure the agent can read the required `docs/*` inputs.
+See `AGENT_INSTRUCTIONS.md` and `agents/README.md` for guidance.
+
+
 ## Goal
 - Define routing strategy and component boundaries
 - Map pages to modules and reusable components
