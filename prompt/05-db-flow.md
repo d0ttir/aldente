@@ -1,4 +1,4 @@
-# Phase 5 – DB + Backend Flow (Supabase Path)
+# Phase 5 – Database + Backend Flow
 
 This phase is tool-agnostic.
 Before running: ensure the agent can read the required `docs/*` inputs.
@@ -8,7 +8,7 @@ See `AGENT_INSTRUCTIONS.md` and `agents/README.md` for guidance.
 ## Goal
 - Define data flow between UI and backend
 - Implement core read/write paths
-- Keep Supabase as the first-class option, but stay provider-agnostic
+- Keep Supabase as a first-class option, but stay provider-agnostic
 
 ## Inputs
 - `docs/data-models.md`

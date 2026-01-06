@@ -20,7 +20,7 @@ Now start by reading `AGENT_INSTRUCTIONS.md` and listing which `docs/*` files yo
 Cursor is good for fast, interactive edits and refactors while keeping phase scope tight.
 
 ## Run a phase prompt
-1. Open the phase file in `prompt/` (e.g., `prompt/phase-04-data-model.md`).
+1. Open the phase file in `prompt/` (e.g., `prompt/04-data-model.md`).
 2. Paste the phase prompt into Cursor’s instruction panel.
 3. Ensure the listed `docs/*` inputs are open or attached.
 4. Apply changes and validate against acceptance criteria.

@@ -28,8 +28,8 @@ Codex, Claude Code, Cursor, Lovable (and other AI-assisted builders). See `setup
 ## Quick start
 Start with `setup.md` for the full workflow and phase map.
 
-## Using with AI tools
-See `AGENT_INSTRUCTIONS.md` and `agents/README.md` for tool adapters.
+## Using with AI agents
+See `AGENT_INSTRUCTIONS.md` and `agents/README.md` for adapters and workflow notes.
 
 Starter prompt (copy/paste):
 ```

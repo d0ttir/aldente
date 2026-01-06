@@ -20,7 +20,7 @@ Now start by reading `AGENT_INSTRUCTIONS.md` and listing which `docs/*` files yo
 Codex is good at implementing structured changes across multiple files and keeping prompt constraints consistent across phases.
 
 ## Run a phase prompt
-1. Open the phase file in `prompt/` (e.g., `prompt/phase-02-layouts.md`).
+1. Open the phase file in `prompt/` (e.g., `prompt/02-layouts.md`).
 2. Provide the phase prompt to Codex as the task.
 3. Attach or reference the relevant `docs/*` files listed in the phase.
 4. Ask Codex to implement changes and summarize outputs.

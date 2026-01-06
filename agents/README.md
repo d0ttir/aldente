@@ -9,6 +9,6 @@ Recommended flow:
 
 Adapters
 - Codex: `agents/codex.md`
-- Claude Code: `agents/claude-code.md`
+- Claude Code: `agents/claude-code.md` (skills-friendly workflow: `agents/claude-code.md#using-aldente-with-claude-code-skills-friendly-workflow`)
 - Cursor: `agents/cursor.md`
 - Lovable: `agents/lovable.md`

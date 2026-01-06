@@ -20,7 +20,7 @@ Now start by reading `AGENT_INSTRUCTIONS.md` and listing which `docs/*` files yo
 Lovable is strong for UI scaffolding and rapid iteration with structured prompts and attached context.
 
 ## Run a phase prompt
-1. Copy a phase prompt from `prompt/` (e.g., `prompt/phase-02-layouts.md`).
+1. Copy a phase prompt from `prompt/` (e.g., `prompt/02-layouts.md`).
 2. Paste it into Lovable as the task.
 3. Attach the `docs/*` files listed in the phase as context.
 4. Review changes and rerun the phase if needed.
